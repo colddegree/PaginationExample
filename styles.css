@@ -1,0 +1,74 @@
+/* https://aykevl.nl/2014/09/fix-jumping-scrollbar */
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#pagination,
+#p-pages {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pagination,
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#pagination > li > a {
+    color: dodgerblue;
+}
+
+#pagination > li > a:hover,
+#p-pages li > a {
+    cursor: pointer;
+}
+
+#pagination li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#pagination li:last-child {
+    margin-right: 0;
+}
+
+#pagination li a {
+    vertical-align: sub;
+}
+
+#p-pages li a,
+.current-page {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: larger;
+}
+
+.current-page {
+    color: white !important;
+    background-color: skyblue !important;
+    cursor: default !important;
+}
+
+.picture {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lavender;
+}
+
+.picture:nth-child(odd) > img {
+    float: left;
+    margin-right: 20px;
+}
+
+.picture:nth-child(even) > img {
+    float: right;
+    margin-left: 20px;
+}
+
+.picture::after {
+    content: "";
+    display: table;
+    clear: both
+}
